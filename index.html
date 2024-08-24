@@ -1,159 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <style>
-        .body {
-            margin: 0%;
+        
+        body{
+            margin: 0;
+            
         }
-
-        .navbar {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-
-        .navbar a {
+        .navbar1{
+            background-color: rgba(245, 245, 245, 0.6);
+            text-align: end;
+            padding: 1%;
+            position: sticky;
+            top: 0px;
+        
+        }      
+        .navbar1 a {
             text-decoration: none;
             color: black;
+            margin: 0px 1.4%;
             font-family: sans-serif;
-            font-weight: bold;
-        }
+            font-size: small;
+        } 
+        
 
-        .navbar .signin {
-            background-color: #00baf2;
-            color: white;
-            width: 8%;
-            padding: 5px;
+        
+        .zomato{
             text-align: center;
-            border-radius: 25px;
+            background-image: url("https://www.savoredjourneys.com/wp-content/uploads/2015/03/spanish-foods.jpg");
+            padding: 7%;
         }
 
-        .signin .fa-user {
-            background-color: #002970;
-            padding: 5px;
-            border-radius: 50%;
+        .zomato h1 {
+        color: white;
+         
+          
         }
-
-        .signin:hover {
-            background-color: #002970;
+        .zomato p{
+            color: white;
         }
-
-        .signin:hover .fa-user {
-            background-color: #00baf2;
+        .pictures{
+            display: flex;
+        
         }
-
-        .rechage {
-            background-color: #00baf2;
-
+        .img1{
+            margin-right: 10px;
         }
-
-        .recharge-bills img {
-            width: 50px;
-
-
+        .pictures img{
+         width: 25%;
         }
-
-        .from-city {
+        .collec-tions{
+         display: flex ;
+         margin: 2%;
+         justify-content: space-between;
+         
+        }
+        .product-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+            margin-top: 2%;
+            text-align: center;
+        }
+        .product-item{
+            box-shadow: 0px 1px 3px rgba(0,0,0,0.6);
+            padding: 10px;
+            border-radius:10px;
+         }
+         .product-item img{
+            width:50%
+         }
+        .from-selection{
+            color: brown;
             width: 15%;
             border: none;
             border-bottom-style: solid;
             padding: 20px;
             margin-left: 20px;
             -webkit-appearance: none;
-
-
         }
-
-        .recharge {
-            background-color: #00baf2;
-
-        }
-
-        .recharge-bills {
-            background-color: #00baf2;
+    
+    
+        
+        .second-row{
             display: flex;
-            justify-content: space-evenly;
-            text-decoration: none;
+        }
+        .tags{
+            display: flexbox;
+        }
+        .tags p{
+            text-align: justify;
         }
 
-        .recharge-bills img {
-            width: 65px;
+        .footer{
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
         }
+        .footer li{
+            list-style-type: none;
+            margin: 10px;
+            position: relative;
+            right: 45px;
+        }
+        
 
-        .recharge-bills p {
-            color: white;
-            font-size: 1.4rem;
-        }
+        @media (max-width:436px){
+            .navbar1{
+                text-align: center;
+            }
+            .collec-tions{
+                display: col;
 
-        a {
-            text-decoration: none;
-        }
+            }
+           
+            
+            }
+
+            
+        
+        
+        
     </style>
 </head>
-
 <body>
-    <nav class="navbar">
-        <a href=""><img src="https://pwebassets.paytm.com/commonwebassets/paytmweb/header/images/logo.svg" width="200"
-                alt=""></a>
-        <a href="paytm"><i class="fa-solid fa-heart"></i></a>
-        <a href="">paytm for consumer</a>
-        <a href="">paytm for business</a>
-        <a href="">investor Relations</a>
-        <a href="">Company</a>
-        <a href="">career</a>
-        <a href="" class="signin">
-            <span>Signin</span>
-            <i class="fa-solid fa-user"></i>
-        </a>
-    </nav>
-    <div>
-        <select class="from-city">
-            <option value="">select city </option>
-            <option value="Vijayawad"> vijayawad</option>
-            <option value="Hyderabad">Hyderabad</option>
-        </select>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img  class="navbar-brand" width="10%" src="https://upload.wikimedia.org/wikipedia/commons/0/09/Zomato_company_logo.png"/>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Investor Relations <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Add Resturent</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Signup</a>
+              </li>
+            </li>
 
-    </div>
-
-
-
-    <div class="recharge">
-
-        <h1>Recharge & Pay Bills on Paytm</h1>
-        <div class="recharge-bills">
-            <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733299/1626251017535.png" alt="">
-                <p> Recharge<br /> prepaid<br />Mobile</p>
-            </a>
-            <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733308/1626251043534.png" alt="">
-                <p>Pay <br />Electricity<br /> bill</p>
-            </a>
-            <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733311/1626251101045.png" alt="">
-                <p>Recharge<br /> DTH<br /> connection</p>
-            </a>
-            <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733307/1626251127863.png" alt="">
-                <p>Book<br /> gas<br /> Cylinder</p>
-            </a>
-            <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/1269194/1672827522093.png"
-                    alt="">
-                <p>Pat Broadband&<br />Landline Bill</p>
-            </a>
-            <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/1269198/1672828917034.png"
-                    alt="">
-                <p>Pay<br />Education<br />Fee</p>
-            </a>
-            <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/757701/1626268580682.png" alt="">
-                <p>All<br />Payment<br />Services</p>
-            </a>
+              
+             
+          </ul>
         </div>
+      </nav>
+    <!-- <div class="navbar1">
+        <a href="">Investor Relations</a>
+        <a href="">Add Resturent</a>
+        <a href="">Login</a>
+        <a href="">Contact</a>
+        <a href="">Signup</a>
+    </div> -->
+    <div class="zomato"> 
+     <h1>ZOMATO-FOOD</h1>
+    <p>Discover the best food & drinks in Vijayawada</p>
+    <input type placeholder="serach for Resturent"/>
     </div>
-</body>
-</body>
 
+    
+        <h1>Collections</h1>
+        <div class="collec-tions">
+        <p>Explore curated lists of top restaurants, cafes, pubs, and bars in Vijayawada, based on trends</p>
+        
+
+    <select class="from-selection">
+        <option value="">All collection in Biryani </option>
+        <option value="Vijayawad"> Biryani</option>
+        <option value="Hyderabad">desert</option>
+    </select></div>
+    <div class="product-container">
+        <div class="product-item">
+        <img class="img1"src="https://img.freepik.com/premium-photo/amazing-delicious-cheese-burger_727939-299.jpg" alt="">
+        <h1 class="product-name">Burger</h1>
+        <p class="product-description">Treat yourself today with our mouthwatering menu of classic burgers and sides, made with only the highest quality ingredients.</p>
+        <p class="product-price">200/-</p>
+    </div>
+    <div class="product-item">
+        <img class="img1" src= "https://static.vecteezy.com/system/resources/thumbnails/025/348/077/small/professional-foodgraphy-instant-noodles-ai-generated-photo.jpg" alt="">
+        <h1 class="product-name">Maggi</h1>
+        <p class="product-description">Made with a blend of finely ground and whole spices, and herbs, the all new MAGGI Instant Noodles have a special and flavourful tastemaker sachet inside. </p>
+        <p class="product-price">100/-</p>
+    </div>
+        <div class="product-item">
+             <img class="img1"src="https://www.cnet.com/a/img/resize/36e8e8fe542ad9af413eb03f3fbd1d0e2322f0b2/hub/2023/02/03/afedd3ee-671d-4189-bf39-4f312248fb27/gettyimages-1042132904.jpg?auto=webp&fit=crop&height=1200&width=1200" alt="">
+             <h1 class="product-name">sandwich</h1>
+             <p class="product-description"> From Classic Sandwiches and Gourmet Grilled Cheese Sandwiches, to Sauces and Sides, this is your go-to blog for all</p>
+             <p class="product-price">50/-</p>
+        </div>
+
+       <div class="product-item">
+            <img src="https://media.istockphoto.com/id/1423092276/photo/business-lunch-in-cafe-tasty-food-on-table-pizza-with-greenery-mozzarella-cheese-bacon-fried.jpg?s=612x612&w=0&k=20&c=GWJKMUd3CsMEd3U9EydhNKZAMzK6LOYzvqJtNGqwmVY=" alt="">
+            <h1 class="product-name">protien salad</h1>
+             <p class="product-description">Fresh greens, cucumbers and sunflower seeds for crunch, juicy tomatoes, feta cheese for tang, plus onion and pepperoncini for zing.</p>
+             <p class="product-price"> 350/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://t4.ftcdn.net/jpg/08/24/91/71/360_F_824917190_rfmzNyXz1kES6obVji2PxOXx5CLzQyfM.jpg" alt="">
+            <h1 class="product-name">Biryani</h1>
+             <p class="product-description"> chiken Biryani</p>
+             <p class="product-price">450/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://www.bakingo.com/blog/wp-content/uploads/2021/10/Lip-smacking-homemade-diwali-sweets.jpg" alt="">
+            <h1 class="product-name">snacks</h1>
+             <p class="product-description"> all varaities</p>
+             <p class="product-price">each 50/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://c8.alamy.com/comp/2PX2H54/crunchy-and-sweet-snacks-prepared-during-diwali-festival-in-maharashtra-india-2PX2H54.jpg" alt="">
+            <h1 class="product-name">sweets</h1>
+             <p class="product-description"> all varaities</p>
+             <p class="product-price">each 50/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://www.colive.com/blog/wp-content/uploads/2018/08/indian-food-restaurant-table-scaled.jpg" alt="">
+            <h1 class="product-name">starters</h1>
+             <p class="product-description">most-loved starters</p>
+             <p class="product-price">each 200/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_SMJO2vcLWdyfnp1JXe-PiD1Lx9d-JhuZEg&s" alt="">
+            <h1 class="product-name">prawns Biryani</h1>
+             <p class="product-description">Special Biryani</p>
+             <p class="product-price">450/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://t4.ftcdn.net/jpg/04/90/19/23/360_F_490192375_qg0In7Wbt4dh5zx18yEazvzPYydN2YOO.jpg" alt="">
+            <h1 class="product-name">Chiken Dum Biryani</h1>
+             <p class="product-description"> Special Biryani</p>
+             <p class="product-price">each 300/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://media.gettyimages.com/id/157472912/photo/ice-cream-composition-on-a-bowl.jpg?s=612x612&w=gi&k=20&c=AniWX1OhaarUxCkgjUoKiA3bKVllK0upCylW6Z0PCMQ=" alt="">
+            <h1 class="product-name">Icecreams</h1>
+             <p class="product-description"> all varaities</p>
+             <p class="product-price">350/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://cdn.pixabay.com/photo/2022/06/27/05/38/spices-7286739_640.jpg" alt="">
+            <h1 class="product-name">Fry Prawns Biryani</h1>
+             <p class="product-description"> Fry Biryani</p>
+             <p class="product-price">each 550/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAZ2diqUsNWk_sost0GvKDM3LRdGQXnUvstg&s" alt="">
+            <h1 class="product-name">Choclate Icecream</h1>
+             <p class="product-description">super cool</p>
+             <p class="product-price">each 250/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8hLZrW0XuYYUobOPNxY4DZYCgIVEgkFU1lA&s" alt="">
+            <h1 class="product-name">cone ice creams</h1>
+             <p class="product-description"> all varaities</p>
+             <p class="product-price">each 50/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://www.gelatovinto.com/cdn/shop/files/Banner-GV_1_d8f88634-2e91-43f1-9b89-355027a472fb_1500x.jpg?v=1678646736" alt="">
+            <h1 class="product-name"> ice creams</h1>
+             <p class="product-description"> all varaities</p>
+             <p class="product-price">each 150/-</p>
+        </div>
+        <div class="product-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW9S9PLyojWUIH51Iho7qI6XoyjnzSq4hIhA&s" alt="">
+            <h1 class="product-name">Almond Icecreams</h1>
+             <p class="product-description">tasty</p>
+             <p class="product-price">each 100/-</p>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+</div>
+</div>
+
+ <div class="container">
+<img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*" alt="">
+</div>
+<div class="footer container">
+    <div >
+<h2>About Zomato</h2>
+<ul>
+<li>Who We Are</li>
+<li>Blog </li>
+<li>Work with us</li>
+<li>Investors Relation</li>
+<li>Report Fraud</li>
+</ul>
+</div>
+
+    <div >
+        <h2>Zomaverse</h2>
+        <ul>
+        <li>Zomato</li>
+        <li>Blinkit </li>
+        <li>Feeding India</li>
+        <li>Hyperpure</li>
+        <li>Zomaland</li>
+        <li>Wether Union</li>
+        </ul>
+        </div>
+<div >
+    <h2>For Resturents</h2>
+    <ul>
+    <li>Patner with Us</li>
+    <li>Apps For You</li>
+    </ul>
+    </div>
+
+
+    <div >
+        <h2>LEARN MORE</h2>
+        <ul>
+        <li>Privacy</li>
+        <li>Security </li>
+        <li>Terms</li>
+        <li>Sitemap</li>
+        
+        </ul>
+        </div>
+        <div >
+    <h2>social Limks</h2>
+ <a href=""><i class="fa-brands fa-linkedin"></i></a>
+<a href=""><i class="fa-brands fa-square-instagram"></i>    </a>
+<a href=""><i class="fa-brands fa-twitter"></i></a>
+<a href=""><i class="fa-brands fa-youtube"></i></a>
+<a href=""><i class="fa-brands fa-facebook"></i></a></br>
+<img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" width="50%" alt="">
+<img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" width="50%" alt="">
+
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
 </html>
